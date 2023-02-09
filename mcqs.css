@@ -1,0 +1,409 @@
+.mcq-questions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*__________________________ For selecting the mcqs __________________*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body,
+html {
+	background-color: #333;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	display: block;
+	position: relative;
+	margin: 20px auto;
+	height: auto;
+	width: 70rem;
+	padding: 20px;
+}
+
+.container ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+ul li {
+	color: #aaaaaa;
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #333;
+}
+
+ul li input[type='radio'] {
+	position: absolute;
+	visibility: hidden;
+}
+
+ul li label {
+	display: block;
+	position: relative;
+	font-weight: 300;
+	font-size: 1em;
+	padding: 25px 25px 25px 80px;
+	margin: 10px auto;
+	height: 30px;
+	z-index: 9;
+	cursor: pointer;
+	color: #fff;
+	transition: all 0.25s linear;
+}
+
+ul li:hover label {
+	color: #d1d1d1;
+}
+
+ul li .check1 {
+	display: block;
+	position: absolute;
+	border: 5px solid #aaaaaa;
+	border-radius: 100%;
+	height: 25px;
+	width: 25px;
+	top: 30px;
+	left: 20px;
+	z-index: 5;
+	transition: border 0.25s linear;
+	-webkit-transition: border 0.25s linear;
+}
+h3,
+li::marker {
+	font-size: 1.4rem;
+	max-width: 70rem;
+	color: #fff;
+}
+ul li:hover .check1 {
+	border: 5px solid #d1d1d1;
+}
+
+ul li .check1::before {
+	display: block;
+	position: absolute;
+	content: '';
+	border-radius: 100%;
+	height: 15px;
+	width: 15px;
+	top: 5px;
+	left: 5px;
+	margin: auto;
+	transition: background 0.25s linear;
+}
+
+input[type='radio']:checked ~ .check1 {
+	border: 5px solid #0dff92;
+}
+
+input[type='radio']:checked ~ .check1::before {
+	background: #0dff92;
+}
+
+/* for Option 2 */
+
+ul li .check2 {
+	display: block;
+	position: absolute;
+	border: 5px solid #aaaaaa;
+	border-radius: 100%;
+	height: 25px;
+	width: 25px;
+	top: 30px;
+	left: 20px;
+	z-index: 5;
+	transition: border 0.25s linear;
+	-webkit-transition: border 0.25s linear;
+}
+
+ul li:hover .check2 {
+	border: 5px solid #d1d1d1;
+}
+
+ul li .check2::before {
+	display: block;
+	position: absolute;
+	content: '';
+	border-radius: 100%;
+	height: 15px;
+	width: 15px;
+	top: 5px;
+	left: 5px;
+	margin: auto;
+	transition: background 0.25s linear;
+}
+input[type='radio']:checked ~ .check2 {
+	border: 5px solid #0dff92;
+}
+
+input[type='radio']:checked ~ .check2::before {
+	background: #0dff92;
+}
+/* end of Option 2 */
+
+/* for Option 3 */
+
+ul li .check3 {
+	display: block;
+	position: absolute;
+	border: 5px solid #aaaaaa;
+	border-radius: 100%;
+	height: 25px;
+	width: 25px;
+	top: 30px;
+	left: 20px;
+	z-index: 5;
+	transition: border 0.25s linear;
+	-webkit-transition: border 0.25s linear;
+}
+
+ul li:hover .check3 {
+	border: 5px solid #d1d1d1;
+}
+
+ul li .check3::before {
+	display: block;
+	position: absolute;
+	content: '';
+	border-radius: 100%;
+	height: 15px;
+	width: 15px;
+	top: 5px;
+	left: 5px;
+	margin: auto;
+	transition: background 0.25s linear;
+}
+input[type='radio']:checked ~ .check3 {
+	border: 5px solid #0dff92;
+}
+
+input[type='radio']:checked ~ .check3::before {
+	background: #0dff92;
+}
+/* end of Option 3 */
+
+/* for Option 3 */
+
+ul li .check4 {
+	display: block;
+	position: absolute;
+	border: 5px solid #aaaaaa;
+	border-radius: 100%;
+	height: 25px;
+	width: 25px;
+	top: 30px;
+	left: 20px;
+	z-index: 5;
+	transition: border 0.25s linear;
+	-webkit-transition: border 0.25s linear;
+}
+
+ul li:hover .check4 {
+	border: 5px solid #d1d1d1;
+}
+
+ul li .check4::before {
+	display: block;
+	position: absolute;
+	content: '';
+	border-radius: 100%;
+	height: 15px;
+	width: 15px;
+	top: 5px;
+	left: 5px;
+	margin: auto;
+	transition: background 0.25s linear;
+}
+input[type='radio']:checked ~ .check4 {
+	border: 5px solid #0dff92;
+}
+
+input[type='radio']:checked ~ .check4::before {
+	background: #0dff92;
+}
+/* end of Option 3 */
+
+input[type='radio']:checked ~ label {
+	color: #0dff92;
+}
+ul li {
+	padding: 0;
+}
+/* Styles for alert... 
+by the way it is so weird when you look at your code a couple of years after you wrote it XD */
+
+/* For Header */
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	letter-spacing: 2px;
+	font-size: 48px;
+}
+p {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: #333333;
+}
+
+.header {
+	position: relative;
+	text-align: center;
+	background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+	color: white;
+}
+.logo {
+	width: 50px;
+	fill: white;
+	padding-right: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.inner-header {
+	height: 15vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+.flex {
+	/*Flexbox for containers*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.waves {
+	position: relative;
+	width: 100%;
+	height: 15vh;
+	margin-bottom: -7px;
+	min-height: 100px;
+	max-height: 150px;
+}
+
+.content {
+	position: relative;
+	height: 20vh;
+	text-align: center;
+	background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+	animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+	animation-delay: -4s;
+	animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+	animation-delay: -5s;
+	animation-duration: 20s;
+}
+@keyframes move-forever {
+	0% {
+		transform: translate3d(-90px, 0, 0);
+	}
+	100% {
+		transform: translate3d(85px, 0, 0);
+	}
+}
+@media (max-width: 768px) {
+	.waves {
+		height: 40px;
+		min-height: 40px;
+	}
+	.content {
+		height: 30vh;
+	}
+	h1 {
+		font-size: 24px;
+	}
+}
+/* Header Ends */
+
+/* For Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+.Management-Navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: #333;
+	width: 100%;
+	height: 6rem;
+}
+.Management-Navbar a {
+	text-decoration: none;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.Management-Navbar .chapters a {
+	margin: auto 2rem;
+}
+.Management-Navbar .last {
+	margin-right: 2rem;
+}
+.Management-Navbar .home {
+	margin-left: 2rem;
+}
+/* Add border on hover */
+
+@supports (-webkit-text-stroke: 1px rgba(0, 172, 193, 1)) {
+	.Management-Navbar nav a:hover {
+		-webkit-text-stroke: 1px rgba(0, 172, 193, 1);
+		-webkit-text-fill-color: white;
+	}
+}
+/* Navbar ends */
+
+.paragraph {
+	background-color: lightgray;
+	width: max-content;
+	height: max-content;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	max-width: 70rem;
+	padding: 2rem;
+	margin: 2rem;
+}
+
+.paragraph-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #333;
+}
+
+.mcq-questions {
+	background-color: #333;
+}

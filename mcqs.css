@@ -13,22 +13,6 @@ html {
 	font-family: 'Lato', sans-serif;
 }
 
-.container {
-	display: block;
-	position: relative;
-	margin: 20px auto;
-	height: auto;
-	width: 70rem;
-	padding: 20px;
-}
-
-.container ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	overflow: auto;
-}
-
 ul li {
 	color: #aaaaaa;
 	display: block;
@@ -36,7 +20,6 @@ ul li {
 	float: left;
 	width: 100%;
 	height: 100px;
-	border-bottom: 1px solid #333;
 }
 
 ul li input[type='radio'] {
@@ -99,11 +82,11 @@ ul li .check1::before {
 }
 
 input[type='radio']:checked ~ .check1 {
-	border: 5px solid #0dff92;
+	border: 5px solid #2c6c41;
 }
 
 input[type='radio']:checked ~ .check1::before {
-	background: #0dff92;
+	background: #2c6c41;
 }
 
 /* for Option 2 */
@@ -139,11 +122,11 @@ ul li .check2::before {
 	transition: background 0.25s linear;
 }
 input[type='radio']:checked ~ .check2 {
-	border: 5px solid #0dff92;
+	border: 5px solid #2c6c41;
 }
 
 input[type='radio']:checked ~ .check2::before {
-	background: #0dff92;
+	background: #2c6c41;
 }
 /* end of Option 2 */
 
@@ -180,11 +163,11 @@ ul li .check3::before {
 	transition: background 0.25s linear;
 }
 input[type='radio']:checked ~ .check3 {
-	border: 5px solid #0dff92;
+	border: 5px solid #2c6c41;
 }
 
 input[type='radio']:checked ~ .check3::before {
-	background: #0dff92;
+	background: #2c6c41;
 }
 /* end of Option 3 */
 
@@ -193,7 +176,7 @@ input[type='radio']:checked ~ .check3::before {
 ul li .check4 {
 	display: block;
 	position: absolute;
-	border: 5px solid #aaaaaa;
+	border: 5px solid #303d74;
 	border-radius: 100%;
 	height: 25px;
 	width: 25px;
@@ -205,7 +188,7 @@ ul li .check4 {
 }
 
 ul li:hover .check4 {
-	border: 5px solid #d1d1d1;
+	border: 5px solid #303d74;
 }
 
 ul li .check4::before {
@@ -221,16 +204,17 @@ ul li .check4::before {
 	transition: background 0.25s linear;
 }
 input[type='radio']:checked ~ .check4 {
-	border: 5px solid #0dff92;
+	border: 5px solid #2c6c41;
 }
 
 input[type='radio']:checked ~ .check4::before {
-	background: #0dff92;
+	background: #2c6c41;
 }
 /* end of Option 3 */
 
 input[type='radio']:checked ~ label {
-	color: #0dff92;
+	color: #2c6c41;
+	background-color: #94d7a2;
 }
 ul li {
 	padding: 0;
@@ -352,26 +336,38 @@ p {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 1rem;
-	padding-bottom: 1rem;
+	margin: 6rem auto;
 	background-color: #333;
 	width: 100%;
 	height: 6rem;
 }
 .Management-Navbar a {
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 2em;
 	color: #fff;
 }
 
 .Management-Navbar .chapters a {
-	margin: auto 2rem;
+	margin: auto 2em;
+	background: #aaaaaa;
+	padding: 1.5em;
+	white-space: pre;
+	white-space: nowrap;
+	border-radius: 1.5rem;
+}
+
+.Management-Navbar .chapters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .Management-Navbar .last {
-	margin-right: 2rem;
+	margin-right: 2em;
+	font-size: 0.7rem;
 }
 .Management-Navbar .home {
-	margin-left: 2rem;
+	font-size: 0.7rem;
+	margin-left: 2em;
 }
 /* Add border on hover */
 
@@ -384,7 +380,7 @@ p {
 /* Navbar ends */
 
 .paragraph {
-	background-color: lightgray;
+	background-color: #c6c8cb;
 	width: max-content;
 	height: max-content;
 	border-radius: 20px;
@@ -404,6 +400,117 @@ p {
 	background-color: #333;
 }
 
+.mcq-questions ul li label {
+	color: #303d74;
+	background-color: #e5e9ee;
+	z-index: 1;
+	border-radius: 0.7rem;
+}
+
+.mcqs-options {
+	background-color: #e5e9ee;
+}
 .mcq-questions {
-	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.mcq-questions .first-mcq ul,
+.mcq-questions .second-mcq ul,
+.mcq-questions .third-mcq ul,
+.mcq-questions .forth-mcq ul {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	background: rgb(151, 151, 151) 60%;
+	border-radius: 1.5rem;
+	padding: 2rem;
+}
+
+/* Trying new button */
+.sketch-button {
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+	appearance: none;
+	outline: none;
+	border: none;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5);
+	border-radius: 11px;
+	padding: 12px 20px;
+	position: relative;
+	line-height: 24px;
+	color: #14387e;
+	box-shadow: 0 1px 2px rgba(0 0 0 / 2%), 0 4px 16px rgba(0 0 0 / 2%), 0 4px 24px rgba(0 0 0 / 2%);
+}
+.sketch-button .lines {
+	position: absolute;
+	inset: 0;
+	mix-blend-mode: hard-light;
+	pointer-events: none;
+	z-index: 1;
+}
+.sketch-button .lines > div {
+	position: absolute;
+	inset: 0;
+}
+.sketch-button .lines > div:last-child {
+	transform: rotate(180deg);
+}
+.sketch-button .lines > div svg {
+	display: block;
+	position: absolute;
+	inset: 0;
+	overflow: visible;
+	fill: none;
+	stroke-width: 2;
+	stroke: #c9e9ff;
+	width: 100%;
+	height: 100%;
+	stroke-dasharray: 2 10;
+	stroke-dashoffset: 14;
+	opacity: 0;
+}
+.sketch-button .lines > div svg:nth-child(1) {
+	stroke: #f8fcff;
+}
+.sketch-button .lines > div svg:nth-child(2) {
+	stroke-width: 6px;
+	filter: blur(20px);
+}
+.sketch-button .lines > div svg:nth-child(3) {
+	stroke-width: 5px;
+	filter: blur(6px);
+}
+.sketch-button .lines > div svg:nth-child(4) {
+	stroke-width: 10px;
+	filter: blur(56px);
+}
+.sketch-button.start svg {
+	animation: stroke 1s linear;
+}
+
+@keyframes stroke {
+	30%,
+	55% {
+		opacity: 1;
+	}
+	100% {
+		stroke-dashoffset: 4;
+		opacity: 0;
+	}
+}
+
+html {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+.chapters {
+	gap: 2em;
 }
